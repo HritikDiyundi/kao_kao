@@ -9,11 +9,12 @@ import { useSession } from 'next-auth/react';
 
 import axios from 'axios';
 import { NextPage } from 'next';
-import { ThemeContext } from '../../../context/UserProvider';
+import { ThemeContext, useTheme } from '../../../context/UserProvider';
 
 const ProfileIndex = () => {
   const { data: session, status } = useSession();
-  const [User, setUser] = useState<User | null>(null);
+  const [User, setUsers] = useState<User | null>(null);
+  const { setUser } = useTheme();
 
   useEffect(() => {
     const handleGet = async () => {
@@ -21,7 +22,8 @@ const ProfileIndex = () => {
         const response = await axios.get<ResponseData>(
           `/api/user/getByEmail?email=${session.user.email}`
         );
-        setUser(response.data.data);
+        setUsers(response.data.data);
+        setUser?.(response.data.data);
         //  setData(response.data);
         //  setUsers(response.data.data);
       }
