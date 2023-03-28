@@ -1,0 +1,42 @@
+.header__icon
+{
+    width: 25px;
+    height: auto;
+}
+.header__input__icon
+{
+    width: 25px;
+    height: auto;
+    color: #536471;
+}
+.header__container
+{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 25px;
+}
+.header__input
+{
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 10px;
+    background-color: var(--bg__gray);
+    border-radius: 20px;
+}
+.header__input:focus-within
+{
+    border: 1px solid black !important;
+    background-color: white;
+}
+.header__input input
+{
+    flex: 1;
+    border: none;
+    background-color: transparent;
+
+}
+.header__input input:focus
+{
+    outline: none;
+}

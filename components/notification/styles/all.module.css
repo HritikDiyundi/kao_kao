@@ -1,0 +1,61 @@
+.all__container
+{
+    display: flex;
+    box-sizing: border-box;
+    padding: 5%;
+    gap: 25px;
+    border-bottom: 2px solid var(--bg__gray);
+    
+}
+.all__icon__style
+{
+    height: 30px;
+    width: auto;
+    color: var(--green__text__color);
+}
+.user__image
+{
+    border-radius: 100%;
+}
+.all__highlight
+{
+    font-weight: bold;
+    color: black;
+}
+.all__heading
+{
+    font-weight: lighter;
+    font-size: medium;
+    box-sizing: border-box;
+    padding: 3% 0% 3% 0%;
+}
+.all__description
+{
+    font-size: lighter;
+    font-weight: lighter;
+     color: #667581;
+}
+.card__container
+{
+   background-color: var(--gray__text__color);
+   color: white;
+}
+.card__logo
+{
+    height: 30px;
+    width: auto;
+    color: white;
+}
+.card__body
+{
+    display: flex;
+    gap: 25px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3% 5% 3% 5%;
+}
+.card__description
+{
+    font-weight: lighter;
+}

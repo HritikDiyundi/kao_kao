@@ -1,0 +1,139 @@
+
+
+.post__container
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 3%;  
+}
+.metadata__index__container
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2%;
+}
+.metadata__left
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.icon__style
+{
+    height: 20px;
+    width: auto;
+    padding: 5px;
+    border-radius: 100%;
+    border: none;
+    transition: all;
+    transition-duration: 0.2s;
+}
+.more__icon
+{
+    color: var(--gray__text__color);
+}
+.more__icon:hover
+{
+    background-color: #72bff22d;
+    color: #72BFF2;  
+}
+.metadata__container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.owner__photo
+{
+    border-radius: 100%;
+}
+.verified__icon
+{
+    width:20px;
+    height: auto;
+    color: var(--green__text__color);
+}
+.metadata__name
+{
+    font-weight: bolder;
+    cursor: pointer;
+}
+.metadata__name:hover
+{
+    text-decoration: underline;
+}
+.metadata__username
+{
+  color: var(--gray__text__color);  
+}
+.metadata__date
+{
+    font-weight: bolder;
+    color: var(--gray__text__color);
+    font-size: 15px;
+}
+.postbody__container p
+{
+    font-weight: lighter;
+    color: var(--gray__text__color);
+}
+
+.postaction__container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    color: var(--gray__text__color);
+}
+.postaction__individual
+{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+}
+.postaction__individual:hover .postaction__comment__icon
+{
+    background-color: #72bff22d;
+    color: #72BFF2;
+    
+}
+.postaction__individual:hover .postaction__comment__text
+{
+    color: #72BFF2;
+}
+.postaction__individual:hover .postaction__retweet__icon
+{
+    background-color: #00990018;
+    color: var(--green__text__color);
+    
+}
+.postaction__individual:hover .postaction__retweet__text
+{
+    color: var(--green__text__color);
+}
+.postaction__individual:hover .postaction__heart__icon
+{
+    background-color:#f93b9420;
+    color: #F93B93;
+    
+}
+.postaction__individual:hover .postaction__heart__text
+{
+    color: #F93B93;
+}
+.postaction__individual:hover .postaction__share__icon
+{
+    background-color: #72bff22d;
+    color: #72BFF2;
+    
+}
+
+

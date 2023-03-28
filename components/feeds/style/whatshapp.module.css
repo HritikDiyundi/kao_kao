@@ -1,0 +1,26 @@
+.wh__container
+{
+    background-color: var(--bg__gray__v2);
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 10%;
+}
+.wh__post__container
+{
+    display: block;
+    padding: 10px 0px 10px 0px;
+}
+.wh__post__mini__heading
+{
+    font-weight: bolder;
+    font-size: 15px ;
+    padding: 5px;
+
+}
+.wh__post__micro__heading
+{
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 5px;
+    color: var(--gray__text__color);
+}

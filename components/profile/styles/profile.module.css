@@ -1,0 +1,180 @@
+.profile__body{
+    box-sizing: border-box;
+}
+
+.profile__username{
+  padding-top: 5px;
+  padding-bottom:0;
+  margin-bottom: -5px;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.profile__tweets{
+    opacity: 0.7;
+    font-size: small;
+    margin: 0px;
+    padding:5px 0;
+}
+
+.profile__Background{
+    height: 25vh;
+    background-size: cover;
+    background-color: #CFD9DE;
+}
+
+.profile__pic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+    margin-top: -23px;
+
+}
+
+.profile__pic__img{
+    margin-left: 15px;
+    height: 19vh;
+    margin-top: -10%;
+    border-radius: 50%;
+    border:5px solid white;
+}
+
+.profile__pic__edit__button{
+    color:black;
+    background-color: white;
+   margin-top: 20px; 
+   margin-right: 10px;
+   border-radius: 30px;
+   border: 1px solid grey;
+   padding: 5px 10px;
+   cursor: pointer;
+    }
+
+    .profile__pic__edit__button:hover{
+        background-color: grey;
+    }
+
+.profile__top__container{
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.639);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.profile__index{
+    border: 1px solid blue;
+}
+
+.LeftArrow{
+    margin-right: 25px;
+    margin-top: 15px;
+}
+
+
+/* BIO */
+
+.bio__full__details{
+    margin-left: 20px;
+
+}
+
+.bio__details {
+    
+    display: flex;
+    flex-direction: column;
+    color: #888;
+    margin-top: 20px;
+  }
+
+
+      .bio__user__name {
+        color: black;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .bio__user__id {
+        margin-top: 2px;
+        font-size: 15px;
+      }
+
+      .bio__user__bio {
+        color: rgb(97, 95, 95);
+        margin-top: 10px;
+        font-size: medium;
+      }
+        .bio__user__bio a {
+          color: var(--theme-color);
+          text-decoration: none;
+        
+      }
+      .bio__user__hbd__text{
+        padding-right: 10px;
+      }
+
+      .bio__user__joined {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        font-size: 15px;
+      }
+        .bio__user__text {
+          margin-left: 5px;
+        }
+    _
+        .bio__user__followers {
+          margin-left: 20px;
+        }
+      
+        .bio__user__follows__following{
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        .bio__user__follows b{
+          color: black;
+        }
+      .bio__user__followed__by {
+        font-size: 16px;
+        margin-top: 15px;
+      }
+
+    .bio__user__follows{
+        color:  #888;;
+        font-size: 14px;
+        display: flex;
+        margin-top: 10px;
+    }
+
+    /* Tabs */
+     .nav{
+      display:flex;
+      justify-content:space-around;
+      font-weight: bold;
+      color:rgb(59, 58, 58);
+      /* padding: 0px;
+      margin: 0px; */
+    }
+    
+    .nav div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 10px 0px;
+      /* height: auto; */
+    /* .activeNav:active{
+color: blue;*/
+
+    } *
+    .nav div:hover {
+      background-color: rgba(208, 209, 207, 0.749);
+      cursor: pointer;
+    }

@@ -1,0 +1,89 @@
+.wtf__container {
+  background-color: var(--bg_gray_v2);
+  padding: 15px 0px 40px 0px;
+
+  border-radius: 50px;
+  margin-top: 10%;
+}
+
+.wtf_scrollable_container {
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.wtf_scrollable_container::-webkit-scrollbar {
+  display: none;
+}
+
+.wtf__heading {
+  margin-left: 10px;
+}
+
+.person__container {
+  display: flex;
+  flex-grow: row;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+}
+
+.person__container:hover {
+  background-color: var(--bg__gray);
+}
+
+.person__dp {
+  border-radius: 100%;
+}
+
+.person_info_container {
+  display: flex;
+  margin: 0px 10px 0px 10px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person__name {
+  font-weight: bolder;
+}
+
+.person__username {
+  font-weight: lighter;
+  color: var(--gray_text_color);
+}
+
+.person_follow_button {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 15px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg__color);
+  color: var(--text__color);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+.person_unfollow_button {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 15px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg__gray);
+  color: var(--hover_bg_color);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}

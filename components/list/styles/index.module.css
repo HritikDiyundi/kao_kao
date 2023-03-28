@@ -1,0 +1,12 @@
+.desc__container
+{
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--bg__gray);
+    padding:0% 3% 0% 3%;
+}
+.desc__container p
+{
+    padding: 5%;
+    padding-top: 6%;
+    font-size: 15px;
+}

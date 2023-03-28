@@ -1,0 +1,82 @@
+.wtf__container {
+  background-color: var(--bg__gray__v2);
+  padding: 15px 0px 40px 0px;
+
+  border-radius: 50px;
+  margin-top: 10%;
+  margin-left: 10px;
+}
+.wtf__scrollable__container {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.wtf__scrollable__container::-webkit-scrollbar {
+  display: none;
+}
+.wtf__heading {
+  margin-left: 8px;
+}
+.person__container {
+  display: flex;
+  flex-grow: row;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0px 10px 10px;
+  width: 100%;
+}
+.person__container:hover {
+  background-color: var(--bg__gray);
+}
+.person__dp {
+  border-radius: 100%;
+}
+.person__info__container {
+  display: flex;
+  margin: 0px 10px 0px 10px;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person__name {
+  font-weight: bolder;
+  font-size: 14px;
+}
+.person__username {
+  font-weight: lighter;
+  font-size: small;
+  color: var(--gray__text__color);
+}
+.person__follow__button {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 15px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg__color);
+  color: var(--text__color);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.person__unfollow__button {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 6px 15px 6px 15px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg__gray);
+  color: var(--hover__bg__color);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}

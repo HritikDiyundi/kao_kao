@@ -1,0 +1,15 @@
+.nolike__container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nolike__container h2
+{
+    margin-left: -70px;
+    margin-bottom: 15px;
+}
+

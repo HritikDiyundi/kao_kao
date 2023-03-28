@@ -1,0 +1,15 @@
+.emptylist__container
+{
+    box-sizing: border-box;
+    padding: 10px 0px 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emptylist__container p
+{
+    max-width: 400px;
+    color: var(--gray__text__color);
+}
