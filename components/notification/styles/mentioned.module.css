@@ -1,0 +1,29 @@
+.mention__container
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+.mention__metadata
+{
+    padding: 5%;
+}
+.mention__heading
+{
+    font-weight: bolder;
+}
+.mention__description
+{
+    color: var(--gray__text__color);
+}
+.mention__link
+{
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.mention__link:hover
+{
+    text-decoration-thickness: 3px;
+}

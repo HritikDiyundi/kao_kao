@@ -1,0 +1,46 @@
+.in__container
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.in__heading
+{
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 3%;
+}
+.navi__container
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 1px solid var(--bg__gray);
+    box-sizing: border-box;
+    padding: 0px 50px 0px 50px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.639);
+}
+.only__tab
+{
+    padding: 10px 0px 15px 0px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--bg__gray);
+    box-sizing: border-box;
+    /* padding: 0px 50px 0px 50px; */
+}
+
+.only__tab:hover
+{
+    background-color: var(--bg__gray);
+}
+.activate__tab
+{
+    border-bottom: solid black;
+    border-width: larger;
+    box-sizing: border-box;
+}

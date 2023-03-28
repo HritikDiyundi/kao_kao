@@ -1,0 +1,70 @@
+.dis__main__container
+{
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--border__color);
+}
+.Ilist__container
+{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px 20px 15px 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.Ilist__container:hover
+{
+    background-color: #F7F7F7;
+}
+.discover__heading
+{
+    padding-left: 20px;
+}
+.icon__container
+{
+  border-radius: 10px;  
+}
+.discover__icon
+{
+    width: 30px;
+    height: auto;
+    color: rgba(0, 0, 0, 0.299);
+    padding: 8px 9px 8px 9px;
+}
+
+.Ilist__middle__div
+{
+    flex: 1;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+.Ilist__title
+{
+    font-weight: bolder;
+}
+.Ilist__button
+{
+    background-color: var(--bg__color);
+    color: var(--text__color);
+    box-sizing: border-box;
+    padding: 8px 15px 8px 15px;
+    border-radius: 30px;
+    font-weight: bolder;
+    transition: all;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+.Ilist__button:hover
+{
+    background-color: var(--hover__bg__color);
+}
+.show__more
+{
+    color: var(--bg__color);
+    padding: 20px;
+    cursor: pointer;
+}
+.show__more:hover
+{
+   background-color: #F7F7F7; 
+}

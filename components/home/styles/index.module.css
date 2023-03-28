@@ -1,0 +1,48 @@
+.bd__container
+{
+    box-sizing: border-box;
+}
+.bd__strip
+{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 2px solid var(--bg__gray);
+    color: var(--green__text__color);
+    cursor: pointer;
+}
+.bd__strip:hover
+{
+    background-color: var(--bg__gray__v2) ;
+}
+.bd__card
+{
+    box-sizing: border-box;
+    padding: 3% 5% 5% 5%;
+    border-bottom: 2px solid var(--bg__gray);
+}
+.bd__card__heading
+{
+    font-weight: bolder;
+}
+.bd__card__description
+{
+    color: var(--gray__text__color);
+}
+.bd__card__button
+{
+    color: var(--text__color);
+    background-color: var(--bg__color);
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.bd__card__button:hover
+{
+    background-color: var(--hover__bg__color);
+}

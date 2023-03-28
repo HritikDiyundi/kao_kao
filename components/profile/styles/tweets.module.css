@@ -1,0 +1,51 @@
+.tweet__container 
+{
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 100%;
+}
+.tweet__image__container
+{
+ padding: 0% 3% 0% 3%;
+}
+.tweet_image
+{
+    border-radius: 100%;
+}
+.tweet__identity 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-right: 5%;
+}
+.tweet__identity p 
+{
+    font-size: 17px;
+}
+.follow__btn
+{
+    box-sizing: border-box;
+    padding: 8px 20px 8px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 15px;
+    border: none;
+    background-color: var(--bg__color);
+    color: var(--text__color);
+    transition: all;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+.follow__btn:hover
+{
+    background-color: var(--hover__bg__color);
+}
+.tweet__description
+{
+    color: var(--gray__text__color);
+    font-size: 15px;
+    box-sizing: border-box;
+    padding: 15px 0px 0px 0px;
+}

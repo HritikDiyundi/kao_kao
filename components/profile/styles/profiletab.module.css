@@ -1,0 +1,29 @@
+.pt__container p 
+{
+  font-weight: bold;  
+}
+.pt__container
+{
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin: 20px 10px 20px 10px;
+    padding: 5px;
+}
+.pt__tab
+{
+    padding: 15px 0px 15px 0px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid var(--bg__gray);
+}
+.pt__tab:hover
+{
+    background-color: var(--bg__gray);
+}
+.selected__tab
+{
+    border-bottom: solid #72BFF2;
+    border-width: medium;
+}

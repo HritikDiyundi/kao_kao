@@ -1,0 +1,105 @@
+.popup__top__container
+{
+    margin-bottom: 20px;
+}
+.popup__icon
+{
+    height: 25px;
+    width: auto;
+    cursor: pointer;
+}
+.popup__identity__container
+{
+    display: flex;
+    gap: 10px;
+}
+.popup__user__dp
+{
+    border-radius: 100%;
+    resize: none;
+}
+.popup__down__icon
+{
+    height: 15px;
+    width: auto;
+}
+.popup__flex__container
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 2px 4px 2px 4px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.popup__flex__container:hover
+{
+    background-color: var(--bg__gray);
+}
+.popup__textarea
+{
+    resize: none;
+    height: 100px;
+    width: 500px;
+    margin-left: 9%;
+    border: none;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.popup__textarea:focus
+{
+   outline: none;
+}
+.popup__accessibility
+{
+    margin-left: 9%;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border__color);
+}
+.popup__action__container
+{
+      margin-left: 9%;
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    justify-content: space-between;   
+}
+.popup__accessibility__icon
+{
+    height: 20px;
+}
+.popup__icon__container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin-top: 5%;
+}
+.header__icon__container__icon
+{
+    width: 22px;
+    height: auto;
+    color: var(--green__text__color);
+    border-radius: 100%;
+    padding: 8px;
+}
+.header__icon__container__icon:hover
+{
+    background-color: var(--fade__green__text__color);
+}
+.popup__tweet__button
+{
+    min-width: 80px;
+    margin-top: 25px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--bg__color);
+    color: var(--text__color);
+    opacity: 0.8;
+}

@@ -1,0 +1,87 @@
+.header__container
+{
+    width: 100%;
+    border-bottom: 1px solid var(--border__color);
+    box-sizing: border-box;
+    padding: 3%;
+}
+.header__starting
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header__starting p
+{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.header__middle
+{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    justify-content: flex-start;
+    margin: 2% 0%;
+}
+.header__user__image
+{
+    border-radius: 100%;
+}
+.header__input
+{
+    border: none;
+    width: 100%;
+    font-size: 20px;
+}
+.header__input::placeholder
+{
+    font-size: 20px;
+}
+.header__input:focus
+{
+    outline: none;
+}
+.header__icons__with__button
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+.header__icon__container
+{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin-left: 10%;
+}
+.header__icon__container > *
+{
+    width: 22px;
+    height: auto;
+    color: var(--green__text__color);
+    border-radius: 100%;
+    padding: 8px;
+}
+.header__icon__container > *:hover
+{
+    background-color: var(--fade__green__text__color);
+}
+.header__right__icon
+{
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+.header__tweet__button
+{
+    min-width: 80px;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--bg__color);
+    color: var(--text__color);
+    opacity: 0.8;
+}
