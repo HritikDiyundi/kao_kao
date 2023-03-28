@@ -10,11 +10,9 @@ import {
   LocationIcon,
 } from '../../helper/NavigtorIcons';
 import styles from '../styles/header.module.css';
-import { UserContext } from '../../../pages/index';
+
 
 const Header = () => {
-  const { users } = useContext(UserContext);
-  console.log(users);
 
   return (
     <div className={styles.header__container}>

@@ -3,7 +3,10 @@ import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import IndexPageHome from '../../components/home/bunch/IndexPageHome';
 import { useTheme } from '../../context/UserProvider';
+import styles from '../styles/index.module.css';
+
 
 export default function Home() {
   const { user, setUser } = useTheme();
@@ -52,7 +55,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <p>this is body.</p>
+
+        <div className={styles.index__container}>
+          <div className={styles.index__content}>
+            <IndexPageHome />
+
+          </div>
+
+        </div>
       </div>
     </>
   );

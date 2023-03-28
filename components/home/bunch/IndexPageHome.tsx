@@ -2,11 +2,9 @@ import React, { useContext } from 'react';
 import Header from '../helper/Header';
 import Posts from '../helper/Posts';
 import styles from '../styles/index.module.css';
-import { UserContext } from '../../../pages';
 
 const IndexPageHome = () => {
-  const { users } = useContext(UserContext);
-  console.log(users);
+
   return (
     <div>
       <Header />

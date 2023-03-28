@@ -6,6 +6,8 @@ import Navigator from '../../components/Navigator';
 import { SessionProvider, useSession } from 'next-auth/react';
 import axios from 'axios';
 import { ThemeContext } from '../../context/UserProvider';
+import PopUpBody from '../../components/PopUpBody';
+import styles from '../styles/popup.module.css'
 
 interface MyAppProps extends AppProps {
   pageProps: {
@@ -50,6 +52,15 @@ export default function App({ Component, pageProps }: MyAppProps) {
             <IndexPageFeed />
             <h3>right</h3>
           </div>
+          {isOpen && (
+            <div>
+              <div onClick={handleClick} className={styles.pop__container}></div>
+              <div className={styles.pop__content__container}>
+                <PopUpBody handleClick={handleClick} />
+              </div>
+              {/* </div> */}
+            </div>
+          )}
         </div>
       </ThemeContext.Provider>
     </SessionProvider>

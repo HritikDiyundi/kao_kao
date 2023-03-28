@@ -1,0 +1,28 @@
+.pop {
+    position: relative;
+    z-index: 99;
+}
+
+.pop__container {
+    position: absolute;
+    left: -11%;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.393);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+.pop__content__container {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    padding: 1%;
+    height: fit-content;
+    border-radius: 10px;
+    min-width: 600px;
+    max-width: 600px;
+}
