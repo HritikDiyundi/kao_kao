@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -67,3 +68,17 @@ export default function Home() {
     </>
   );
 }
+
+
+// export const getServerSideProps: GetServerSideProps<{ data: tweetDoc[] | null }> = async (context) => {
+//   const res = await fetch(`${process.env.API_LINK}/tweet/get/top/feeds`)
+//   const data: tweetDoc[] | null = await res.json()
+//   console.log(data);
+
+
+//   return {
+//     props: {
+//       data,
+//     },
+//   }
+// }

@@ -9,6 +9,16 @@ interface User {
   updatedAt: string;
   __v: number;
 }
+
+interface userDoc{
+  name:string,
+  email:string,
+  imageUrl:string,
+  followers:string[],
+  following:string[]
+}
+
+
 interface subUsers {
   _id: string;
   name: string;

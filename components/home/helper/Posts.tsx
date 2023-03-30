@@ -11,7 +11,13 @@ import {
 import styles from '../styles/posts.module.css';
 import { useSession } from 'next-auth/react';
 
-const Posts = () => {
+interface Props {
+  data: {
+    tweet: tweetDoc | null;
+  }
+}
+
+const Posts = ({ author, comments, likes, reference, retweets }: tweetDoc) => {
   const { data: session, status } = useSession();
 
   return (
@@ -26,21 +32,26 @@ const Posts = () => {
         />
       </div>
       <div className={styles.metadata__index__container}>
-        <Metadata />
-        <PostBody />
+        <Metadata userName={author.email} name={author.name} />
+        <PostBody tweetData={reference} />
         {status === 'authenticated' ? <PostAction /> : <div></div>}
       </div>
     </div>
   );
 };
+interface metadataprops {
+  name: string;
+  userName: string;
 
-const Metadata = () => {
+}
+
+const Metadata = ({ name, userName }: metadataprops) => {
   return (
     <div className={styles.metadata__container}>
       <div className={styles.metadata__left}>
-        <p className={styles.metadata__name}>Name</p>
+        <p className={styles.metadata__name}>{name}</p>
         <VerifiedIcon className={styles.verified__icon} />
-        <p className={styles.metadata__username}>@username.</p>
+        <p className={styles.metadata__username}>@{userName}.</p>
         <pre className={styles.metadata__date}>Oct 13</pre>
       </div>
       <div>
@@ -50,13 +61,16 @@ const Metadata = () => {
   );
 };
 
-const PostBody = () => {
+interface postBodyProps {
+  tweetData: string;
+
+}
+
+const PostBody = ({ tweetData }: postBodyProps) => {
   return (
     <div className={styles.postbody__container}>
       <p>
-        Last chance to celebrate. Enjoy instant savings across all products.
-        Save more with Trade-In. Plus get free engraving on selected items.
-        Offer ends on 24 October.
+        {tweetData}
       </p>
     </div>
   );
