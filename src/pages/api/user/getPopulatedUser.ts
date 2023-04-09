@@ -2,22 +2,19 @@ import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'PUT') {
-    handlePut(req, res);
+  if (req.method === 'GET') {
+    handleGet(req, res);
   } else {
     res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
 
-async function handlePut(req: NextApiRequest, res: NextApiResponse) {
-  const { tweetId } = req.query;
-  const { userId } = req.body;
+async function handleGet(req: NextApiRequest, res: NextApiResponse) {
+  const { email } = req.query;
   try {
-    const response = await axios.put(
-      `${process.env.API_LINK}/tweet/like/${tweetId}` as string,
-      { userId: userId }
+    const response = await axios.get(
+      `${process.env.API_LINK}/user/get/populatedUser/${email}`
     );
-
     res.status(200).json(response.data);
   } catch (error) {
     console.error(error);

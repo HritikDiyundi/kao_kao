@@ -10,14 +10,13 @@ interface User {
   __v: number;
 }
 
-interface userDoc{
-  name:string,
-  email:string,
-  imageUrl:string,
-  followers:string[],
-  following:string[]
+interface userDoc {
+  name: string;
+  email: string;
+  imageUrl: string;
+  followers: string[];
+  following: string[];
 }
-
 
 interface subUsers {
   _id: string;

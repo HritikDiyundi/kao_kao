@@ -3,17 +3,31 @@ import { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import IndexPageHome from '../../components/home/bunch/IndexPageHome';
 import { useTheme } from '../../context/UserProvider';
 import styles from '../styles/index.module.css';
-
+import { SocketContext } from '../../context/SpcketProvider';
+import { io } from 'socket.io-client';
 
 export default function Home() {
   const { user, setUser } = useTheme();
   const [users, setUsers] = useState<User | null>(null);
   const [dataa, setData] = useState<ResponseData | null>(null);
   const { data: session, status } = useSession();
+  const { socket } = useContext(SocketContext);
+  // const END_POINTS = 'https://02bb-103-115-183-168.in.ngrok.io';
+  const [userID, setUserID] = useState<string>('');
+
+  useEffect(() => {
+    if (users != null) {
+      console.log(socket);
+
+      socket?.emit('newUser', users.email);
+      socket?.on('connected', () => console.log('connected with backend'));
+      console.log('checking....');
+    }
+  }, [socket, users]);
 
   useEffect(() => {
     if (session && session.user) {
@@ -31,17 +45,19 @@ export default function Home() {
               '/api/user/post',
               data
             );
-            // console.log(response.data);
+
             setData(response.data);
             setUsers(response.data.data);
+            setUserID(response.data.data?._id || '');
+
+            // setSocket(socket);
+            // socket.emit('join', response.data.data?._id);
 
             setUser?.(response.data.data);
           }
         };
         handlePost();
       }
-
-      console.log(user);
 
       // fetchUser(email);
     }
@@ -56,25 +72,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-
         <div className={styles.index__container}>
           <div className={styles.index__content}>
             <IndexPageHome />
-
           </div>
-
         </div>
       </div>
     </>
   );
 }
 
-
 // export const getServerSideProps: GetServerSideProps<{ data: tweetDoc[] | null }> = async (context) => {
 //   const res = await fetch(`${process.env.API_LINK}/tweet/get/top/feeds`)
 //   const data: tweetDoc[] | null = await res.json()
 //   console.log(data);
-
 
 //   return {
 //     props: {

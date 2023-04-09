@@ -1,139 +1,194 @@
-
-
-.post__container
-{
-    display: flex;
-    flex-direction: row;
-    width: 100%; 
-    box-sizing: border-box;
-    padding: 3%;  
+.post__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
 }
-.metadata__index__container
-{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 2%;
+.metadata__index__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 2%;
 }
-.metadata__left
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
+.metadata__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
 }
 
-.icon__style
-{
-    height: 20px;
-    width: auto;
-    padding: 5px;
-    border-radius: 100%;
-    border: none;
-    transition: all;
-    transition-duration: 0.2s;
+.icon__style {
+  height: 20px;
+  width: auto;
+  padding: 5px;
+  border-radius: 100%;
+  border: none;
+  transition: all;
+  transition-duration: 0.2s;
 }
-.more__icon
-{
-    color: var(--gray__text__color);
+.more__icon {
+  color: var(--gray__text__color);
 }
-.more__icon:hover
-{
-    background-color: #72bff22d;
-    color: #72BFF2;  
+.more__icon:hover {
+  background-color: #72bff22d;
+  color: #72bff2;
 }
-.metadata__container
-{
-    display: flex;
-    justify-content: space-between;
+.metadata__container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.owner__photo
-{
-    border-radius: 100%;
+.owner__photo {
+  border-radius: 100%;
 }
-.verified__icon
-{
-    width:20px;
-    height: auto;
-    color: var(--green__text__color);
+.verified__icon {
+  width: 20px;
+  height: auto;
+  color: var(--green__text__color);
 }
-.metadata__name
-{
-    font-weight: bolder;
-    cursor: pointer;
+.metadata__name {
+  font-weight: bolder;
+  cursor: pointer;
 }
-.metadata__name:hover
-{
-    text-decoration: underline;
+.metadata__name:hover {
+  text-decoration: underline;
 }
-.metadata__username
-{
-  color: var(--gray__text__color);  
+.metadata__username {
+  color: var(--gray__text__color);
 }
-.metadata__date
-{
-    font-weight: bolder;
-    color: var(--gray__text__color);
-    font-size: 15px;
+.metadata__date {
+  font-weight: bolder;
+  color: var(--gray__text__color);
+  font-size: 15px;
 }
-.postbody__container p
-{
-    font-weight: lighter;
-    color: var(--gray__text__color);
+.postbody__container p {
+  font-weight: lighter;
+  color: var(--gray__text__color);
 }
 
-.postaction__container
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
-    color: var(--gray__text__color);
+.postaction__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--gray__text__color);
 }
-.postaction__individual
-{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    align-items: center;
-    cursor: pointer;
+.postaction__individual {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  cursor: pointer;
 }
-.postaction__individual:hover .postaction__comment__icon
-{
-    background-color: #72bff22d;
-    color: #72BFF2;
-    
+.postaction__individual:hover .postaction__comment__icon {
+  background-color: #72bff22d;
+  color: #72bff2;
 }
-.postaction__individual:hover .postaction__comment__text
-{
-    color: #72BFF2;
+.postaction__individual:hover .postaction__comment__text {
+  color: #72bff2;
 }
-.postaction__individual:hover .postaction__retweet__icon
-{
-    background-color: #00990018;
-    color: var(--green__text__color);
-    
+.postaction__individual:hover .postaction__retweet__icon {
+  background-color: #00990018;
+  color: var(--green__text__color);
 }
-.postaction__individual:hover .postaction__retweet__text
-{
-    color: var(--green__text__color);
+.postaction__individual:hover .postaction__retweet__text {
+  color: var(--green__text__color);
 }
-.postaction__individual:hover .postaction__heart__icon
-{
-    background-color:#f93b9420;
-    color: #F93B93;
-    
+.postaction__individual:hover .postaction__heart__icon {
+  background-color: #f93b9420;
+  color: #f93b93;
 }
-.postaction__individual:hover .postaction__heart__text
-{
-    color: #F93B93;
+.liked {
+  color: #f93b93;
 }
-.postaction__individual:hover .postaction__share__icon
-{
-    background-color: #72bff22d;
-    color: #72BFF2;
-    
+.postaction__individual:hover .postaction__heart__text {
+  color: #f93b93;
+}
+.postaction__individual:hover .postaction__share__icon {
+  background-color: #72bff22d;
+  color: #72bff2;
+}
+.comment__container {
+  width: 100%;
+}
+.comment__post__container {
+  box-sizing: border-box;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+}
+.comment__input__bar {
+  padding: 10px;
+  width: 95%;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  max-height: 30px;
+  background-color: var(--bg__gray);
+  border-radius: 50px;
+  transition: all;
+  transition-duration: 1s;
+  margin: auto;
 }
 
+.comment__input__bar input::placeholder {
+  color: gray;
+}
+.comment__input__bar input:focus {
+  outline: none;
+}
+.comment__input__bar input {
+  background-color: transparent;
+  font-size: 15px;
+  border: none;
+}
+.comment__input {
+  width: 100%;
+}
+.comment__post__button {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px 4px 10px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg__color);
+  color: var(--text__color);
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}
+.comment__post__button:hover {
+  background-color: rgba(0, 0, 0, 0.815);
+}
+.comment__display__div {
+  display: flex;
+  flex-direction: column;
+}
+.comment__image {
+  height: 50px;
+}
+.comment__content__container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 5px 0px 0px;
+}
 
+.comment {
+  color: var(--gray__text__color);
+}
+.comment__owner__name {
+  font-size: 13px;
+  font-weight: bolder;
+  margin-left: 10px;
+  color: black;
+}
+.comment__owner__createdat {
+  font-size: 13px;
+  color: rgb(158, 158, 158);
+  font-weight: bolder;
+  margin-left: 5px;
+}

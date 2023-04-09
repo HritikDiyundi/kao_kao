@@ -1,31 +1,45 @@
 import React from 'react';
 import styles from '../style/whatshapp.module.css';
+import { results } from '../../../src/utils/News.json';
 
 const WhatsHapp = () => {
   return (
     <div className={styles.wh__container}>
       <h3 className={styles.wh__heading}>What&apos;s happening</h3>
-      <Post />
-      <Post />
-      <Post />
+      {results.slice(0, 3).map((i, key) => {
+        return (
+          <Post
+            key={key}
+            heading={i.heading}
+            description={i.description ? i.description.slice(0, 10) : ' '}
+            liveStatus={i.liveStatus}
+            hashtag={i.hashtag}
+          />
+        );
+      })}
     </div>
   );
 };
 
-const Post = () => {
+interface postProps {
+  heading: string;
+  description: string;
+  liveStatus: boolean;
+  hashtag: string;
+}
+
+const Post = ({ heading, description, hashtag, liveStatus }: postProps) => {
   return (
     <div className={styles.wh__post__container}>
       <p className={styles.wh__post__micro__heading}>
-        War in Ukrain.
+        {heading}
         <span className={styles.wh__post__live}>
-          <b>LIVE</b>
+          <b>{liveStatus ? 'LIVE' : ''}</b>
         </span>
       </p>
-      <p className={styles.wh__post__mini__heading}>
-        Loud explosions rock Ukraine’s capital Kyiv
-      </p>
+      <p className={styles.wh__post__mini__heading}>{description}</p>
       <p className={styles.wh__post__micro__heading}>
-        Trending with <span className="hashtag">#UkrainWar</span>
+        Trending with <span className="hashtag">{hashtag}</span>
       </p>
     </div>
   );

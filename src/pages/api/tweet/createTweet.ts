@@ -3,9 +3,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    handlePost(req, res);
+    return handlePost(req, res);
   } else {
-    res.status(405).json({ message: 'Method Not Allowed' });
+    return res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
 
@@ -20,9 +20,9 @@ async function handlePost(req: NextApiRequest, res: NextApiResponse) {
       }
     );
 
-    res.status(200).json(response.data);
+    return res.status(200).json(response.data);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Internal Server Error' });
+    return res.status(500).json({ message: 'Internal Server Error' });
   }
 }

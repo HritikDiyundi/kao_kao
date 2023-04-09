@@ -12,30 +12,61 @@ import {
 import styles from '../styles/header.module.css';
 import { useTheme } from '../../../context/UserProvider';
 import axios from 'axios';
+import { SendNotification } from '../../../functions/sendPostNotification';
+import { SocketContext } from '../../../context/SpcketProvider';
+import { toast } from 'react-hot-toast';
+
+interface Tweet {
+  reference: string;
+  author: string;
+  likes: string[];
+  retweets: string[];
+  comments: string[];
+  _id: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
+interface CreateTweetResponseData {
+  data: Tweet;
+  message: string;
+}
 
 const Header = () => {
-
-  const [ref, setRef] = useState<string>(" ")
+  const [ref, setRef] = useState<string>(' ');
+  const [post, setPost] = useState<Tweet | null>(null);
+  const [PostID, setPostID] = useState<string>('');
   const { user } = useTheme();
   // console.log(user?.email)
+  const { socket } = useContext(SocketContext);
 
   const handlePost = async () => {
+    let postID: string = '';
+    toast.loading('Take a tea ☕, wait...', { id: 'posting' });
     if (user?._id != null) {
-      const response = await axios.post<ResponseData>(
+      const response = await axios.post<CreateTweetResponseData>(
         '/api/tweet/createTweet',
         {
-          'reference': ref,
-          'author': user._id
+          reference: ref,
+          author: user._id,
         }
       );
-      console.log(response);
-      setRef("");
+      console.log(response.data);
+      postID = response.data.data._id;
+      setRef('');
+      setPost(response.data.data);
+      if (!response.data.data) {
+        toast.error('Something went wrong.', { id: 'posting' });
+      } else {
+        toast.success('Your DC Tweet has been created!', { id: 'posting' });
+      }
     }
-  }
-
+    if (socket && postID)
+      SendNotification(user?.email as string, postID, socket);
+  };
 
   return (
-
     <div className={styles.header__container}>
       <div className={styles.header__starting}>
         <p>Home</p>
@@ -56,7 +87,9 @@ const Header = () => {
           className={styles.header__input}
           placeholder="what's happening ?"
           value={ref}
-          onChange={(e) => { setRef(e.target.value) }}
+          onChange={(e) => {
+            setRef(e.target.value);
+          }}
         />
       </div>
       <div className={styles.header__icons__with__button}>

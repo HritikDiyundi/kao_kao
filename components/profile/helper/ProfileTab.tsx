@@ -6,64 +6,99 @@ import Likes from './Likes';
 import styles from '../styles/profiletab.module.css';
 
 const Ptab = () => {
-  const [activeTab, setActiveTab] = useState<Number>(0);
+  const [activeComponent, setActiveComponent] =
+    useState<string>('ComponentOne');
+  const handleButtonClick = (componentName: string) => {
+    setActiveComponent(componentName);
+  };
 
+  const renderComponent = () => {
+    switch (activeComponent) {
+      case 'ComponentOne':
+        return <Likes />;
+      case 'ComponentTwo':
+        return <TAR />;
+      case 'ComponentThree':
+        return <Media />;
+      case 'ComponentFour':
+        return <Tweets />;
+      default:
+        return <Likes />;
+    }
+  };
+
+  // return (
+  //   <div>
+  //     <PTabNavigator state={activeTab} setState={setActiveTab} />
+  //     {/* <div>
+  //       {(() => {
+  //         if (activeTab == 3) return <Likes />;
+  //         else if (activeTab == 1) return <TAR />;
+  //         else if (activeTab == 2) return <Media />;
+  //         else if (activeTab == 0) return <Tweets />;
+  //       })()}
+  //     </div> */}
+
+  //   </div>
+  // );
   return (
     <div>
-      <PTabNavigator state={activeTab} setState={setActiveTab} />
-      <div>
-        {(() => {
-          if (activeTab == 3) return <Likes />;
-          else if (activeTab == 1) return <TAR />;
-          else if (activeTab == 2) return <Media />;
-          else if (activeTab == 0) return <Tweets />;
-        })()}
-      </div>
+      <PTabNavigator
+        state={activeComponent}
+        setState={setActiveComponent}
+        handleClick={handleButtonClick}
+      />
+      <div>{renderComponent()}</div>
     </div>
   );
 };
 
-const PTabNavigator = ({ state, setState }: navigatorTypes) => {
+const PTabNavigator = ({ state, setState, handleClick }: navigatorTypes) => {
   return (
     <div className={styles.pt__container}>
       <div
         className={`${styles.pt__tab} ${
-          state === 0 ? styles.selected__tab : ''
+          state == 'ComponentOne' ? styles.selected__tab : ''
         }`}
+        onClick={() => handleClick('ComponentOne')}
       >
-        <p onClick={() => setState(0)}>Tweets</p>
+        <p>Tweets</p>
       </div>
       <div
         title="Tweets_&_replies"
         className={`${styles.pt__tab} ${
-          state === 1 ? styles.selected__tab : ''
+          state == 'ComponentTwo' ? styles.selected__tab : ''
         }`}
+        onClick={() => handleClick('ComponentTwo')}
       >
-        <p onClick={() => setState(1)}>Tweets & replies</p>
+        <p>Tweets & replies</p>
       </div>
       <div
         title="Followers"
         className={`${styles.pt__tab} ${
-          state === 2 ? styles.selected__tab : ''
+          state == 'ComponentThree' ? styles.selected__tab : ''
         }`}
+        onClick={() => handleClick('ComponentThree')}
       >
-        <p onClick={() => setState(2)}>Followers</p>
+        <p>Followers</p>
       </div>
       <div
         title="Likes"
         className={`${styles.pt__tab} ${
-          state === 3 ? styles.selected__tab : ''
+          state == 'ComponentFour' ? styles.selected__tab : ''
         }`}
+        onClick={() => handleClick('ComponentFour')}
       >
-        <p onClick={() => setState(3)}>Likes</p>
+        <p>Likes</p>
       </div>
     </div>
   );
 };
 
 type navigatorTypes = {
-  state: Number;
-  setState: Dispatch<SetStateAction<Number>>;
+  state: string;
+  setState: Dispatch<SetStateAction<string>>;
+  handleClick: (componentName: string) => void;
 };
 
 export default Ptab;

@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "heading": "NASA launches new Mars rover",
+      "description": "NASA successfully launched its new Mars rover on Thursday, which will search for signs of ancient life on the red planet.",
+      "liveStatus": true,
+      "hashtag": "#MarsRover"
+    },
+    {
+      "heading": "Tesla announces record profits",
+      "description": "Electric car maker Tesla announced record profits for the second quarter in a row, thanks to strong sales and cost-cutting measures.",
+      "liveStatus": false,
+      "hashtag": "#Tesla"
+    },
+    {
+      "heading": "Facebook introduces new privacy features",
+      "description": "Facebook has rolled out new privacy features that give users more control over their data, following years of criticism over the company's handling of personal information.",
+      "liveStatus": true,
+      "hashtag": "#Facebook"
+    },
+    {
+      "heading": "Bitcoin hits all-time high",
+      "description": "The price of Bitcoin hit an all-time high of $64,000 on Wednesday, driven by increased institutional investment and growing mainstream acceptance.",
+      "liveStatus": true,
+      "hashtag": "#Bitcoin"
+    },
+    {
+      "heading": "Google announces new Pixel phone",
+      "description": "Google has unveiled its latest Pixel phone, which features a new camera system and improved battery life.",
+      "liveStatus": false,
+      "hashtag": "#Pixel"
+    },
+    {
+      "heading": "Amazon acquires MGM studios",
+      "description": "Amazon has acquired MGM studios for $8.45 billion, giving the tech giant access to a vast library of movies and TV shows.",
+      "liveStatus": true,
+      "hashtag": "#Amazon"
+    },
+    {
+      "heading": "Elon Musk plans to colonize Mars",
+      "description": "Tesla CEO Elon Musk has announced plans to colonize Mars within the next decade, using SpaceX's Starship spacecraft.",
+      "liveStatus": true,
+      "hashtag": "#Mars"
+    },
+    {
+      "heading": "Apple releases new iPhone",
+      "description": "Apple has released its latest iPhone, which features a larger screen and improved camera system.",
+      "liveStatus": false,
+      "hashtag": "#iPhone"
+    },
+    {
+      "heading": "Facebook whistleblower speaks out",
+      "description": "A former Facebook employee has come forward as a whistleblower, revealing that the company prioritizes profit over user safety and well-being.",
+      "liveStatus": true,
+      "hashtag": "#Whistleblower"
+    },
+    {
+      "heading": "Google faces antitrust lawsuit",
+      "description": "Google is facing an antitrust lawsuit from the US government, which alleges that the company engages in anti-competitive practices.",
+      "liveStatus": true,
+      "hashtag": "#Antitrust"
+    }
+  ]
+}
