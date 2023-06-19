@@ -33,8 +33,17 @@ const Posts = ({
   const { user } = useTheme();
   const { data: session, status } = useSession();
   const [isCommentOpen, setIsCommentOpen] = useState<boolean>(false);
-
   const [comment, setComment] = useState<string>('');
+
+  // const provider = new ethers.providers.Web3Provider(
+  //   'https://alchemy_rinkeby_url'
+  // ); // replace alchemy_rinkeby_url with your Alchemy Rinkeby URL
+  // const contractAddress = '0x...'; // replace with the address of your deployed contract
+  // const contract = new ethers.Contract(
+  //   contractAddress,
+  //   TwitterContractABI.abi,
+  //   provider
+  // );
 
   const handleClick = async (): Promise<void> => {
     const response = await axios.post<ResponseData>(
@@ -60,7 +69,7 @@ const Posts = ({
         </div>
       </div>
       <div className={styles.metadata__index__container}>
-        <Metadata userName={author.email} name={author.name} />
+        <Metadata userName={author?.email} name={author?.name} />
         <PostBody tweetData={reference} />
         {status === 'authenticated' ? (
           <PostAction

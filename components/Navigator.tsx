@@ -31,44 +31,46 @@ const Navigator = ({ handleClick }: notificationType) => {
             <p>Home</p>
           </div>
         </Link>
-        <Link href="/explore">
+        {/* <Link href="/explore">
           <div className={styles.navigator__row}>
             <Hash />
             <p>Explore</p>
           </div>
-        </Link>
+        </Link> */}
         <Link href="/notification">
           <div className={styles.navigator__row}>
             <Notification />
             <p>Notification</p>
           </div>
         </Link>
-        <div className={styles.navigator__row}>
-          <Message />
-          <p>Message</p>
-        </div>
-        <Link href="/bookmark">
+        <Link href="/message">
+          <div className={styles.navigator__row}>
+            <Message />
+            <p>Message</p>
+          </div>
+        </Link>
+        {/* <Link href="/bookmark">
           <div className={styles.navigator__row}>
             <Bookmark />
             <p>Bookmark</p>
           </div>
-        </Link>
-        <Link href={`/${String('bhushan_r')}/list`}>
+        </Link> */}
+        {/* <Link href={`/${String('bhushan_r')}/list`}>
           <div className={styles.navigator__row}>
             <List />
             <p>List</p>
           </div>
-        </Link>
+        </Link> */}
         <Link href={`/profile`}>
           <div className={styles.navigator__row}>
             <Profile />
             <p>Profile</p>
           </div>
         </Link>
-        <div className={styles.navigator__row}>
+        {/* <div className={styles.navigator__row}>
           <More />
           <p>More</p>
-        </div>
+        </div> */}
         <div onClick={handleClick} className={styles.navigator__tweet__button}>
           Tweet
         </div>

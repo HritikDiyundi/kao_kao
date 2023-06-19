@@ -87,3 +87,6 @@
   transition: all;
   transition-duration: 0.5s;
 }
+.person__button__container {
+  display: flex;
+}

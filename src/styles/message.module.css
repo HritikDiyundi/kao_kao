@@ -1,0 +1,116 @@
+.message__body {
+  position: relative;
+  width: 44vw;
+  /* display: flex; */
+  box-sizing: border-box;
+}
+.fixed__button {
+  position: fixed;
+  bottom: 10%;
+  right: 30%;
+  border-radius: 100%;
+  height: 40px;
+  cursor: pointer;
+}
+.extra__style {
+  position: fixed;
+  bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+  width: 44vw;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.pop__up__body {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border: 0.5px solid gray;
+  border-radius: 30px 30px 0px 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.individual__chat {
+  padding: 10px 0px 10px 0px;
+  transition: all;
+  animation-duration: 0.5s;
+  border-bottom: 0.5px solid gray;
+  cursor: pointer;
+}
+.individual__chat:hover {
+  background-color: var(--border__color);
+}
+.blurr {
+  backdrop-filter: blur(5px);
+}
+.username__container {
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding-left: 10px;
+}
+.message__username {
+  font-size: 30px;
+}
+.input__bar {
+  width: 550px;
+  padding: 10px;
+}
+.button__style {
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--bg__color);
+  color: white;
+}
+.chatbody__style {
+  height: 550px;
+  padding: 10px;
+  overflow: scroll;
+  /* background-color: red; */
+}
+.chatbody__style::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  display: flex;
+  /* padding: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px; */
+}
+.msgbx {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.received {
+  justify-content: flex-start;
+}
+.received__text {
+  background-color: var(--border__color);
+  padding: 8px;
+  border-radius: 20px;
+  max-width: 200px;
+}
+
+.sent {
+  justify-content: flex-end;
+}
+.sent__text {
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  max-width: 200px;
+}
+.timeline {
+  font-size: 10px;
+}
+.icon {
+  color: black;
+  width: 25px;
+  height: 25px;
+}

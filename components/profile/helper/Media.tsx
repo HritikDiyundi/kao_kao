@@ -5,6 +5,7 @@ import styles from '../styles/media.module.css';
 import axios from 'axios';
 import { useSession } from 'next-auth/react';
 import { useTheme } from '../../../context/UserProvider';
+import { useRouter } from 'next/router';
 
 const Media = () => {
   const { user } = useTheme();
@@ -53,7 +54,7 @@ const Media = () => {
   if (Followings.length !== 0) {
     return (
       <div className={styles.wtf__container}>
-        <h3 className={styles.wtf__heading}>Who To Follow</h3>
+        <h3 className={styles.wtf__heading}></h3>
         <div className={styles.wtf_scrollable_container}>
           {Followings.map((i, index) => {
             if (i.email != session?.user?.email)
@@ -96,6 +97,7 @@ interface sub {
 
 const Person = ({ email, name, id, userFollowings, userId }: personType) => {
   const [follow, setFollow] = useState<boolean>(false);
+  const router = useRouter();
   // console.log(followers);
 
   function isIdInArray(idArray: string[], idToCheck: string) {
@@ -108,6 +110,14 @@ const Person = ({ email, name, id, userFollowings, userId }: personType) => {
     const response = await axios.put<ResponseData>(
       `/api/user/folunfo?followerId=${followerId}&userId=${userId}`
     );
+  };
+
+  const handleMessage = async (userId: string, receiverId: string) => {
+    const response = await axios.post<any>(`/api/message/createChat`, {
+      participants: [userId, receiverId],
+    });
+    console.log(response);
+    router.push('/message');
   };
   return (
     <div className={styles.person__container}>
@@ -125,7 +135,15 @@ const Person = ({ email, name, id, userFollowings, userId }: personType) => {
           <p className={styles.person__name}>{name}</p>
           <p className={styles.person__username}>@{email.slice(0, 18)}</p>
         </div>
-        <div>
+        <div className={styles.person__button__container}>
+          <button
+            className={styles.person_unfollow_button}
+            onClick={() => {
+              handleMessage(userId, id);
+            }}
+          >
+            Message
+          </button>
           <button
             className={
               follow

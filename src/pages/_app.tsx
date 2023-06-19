@@ -13,7 +13,8 @@ import { SocketContext, SocketContextType } from '../../context/SpcketProvider';
 import { Socket, io } from 'socket.io-client';
 import { Toaster, toast } from 'react-hot-toast';
 // const END_POINTS = 'http://localhost:8081';
-const END_POINTS = 'https://be98-103-183-90-211.ngrok-free.app';
+const END_POINTS = 'http://localhost:8081';
+import { MoralisProvider } from 'react-moralis';
 
 interface MyAppProps extends AppProps {
   pageProps: {
@@ -38,7 +39,7 @@ export default function App({ Component, pageProps }: MyAppProps) {
     console.log(END_POINTS);
 
     const socket = io(END_POINTS, {
-      withCredentials: true,
+      // withCredentials: true,
     });
 
     socket?.on('getText', (data) => {
@@ -63,44 +64,39 @@ export default function App({ Component, pageProps }: MyAppProps) {
     }
   }
   return (
-    // <div className="grid-container">
-    //   <div>{/* left navigation */}</div>
-    //   <div>
-    //     <Component {...pageProps} />
-    //   </div>
-    //   <div>{/* Feed section */}</div>
-    // </div>
-    <SocketContext.Provider value={socketContextValue}>
-      <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
-        <ThemeContext.Provider value={{ user: user!, setUser }}>
-          <div className="parent">
-            <div className="child left">
-              <Navigator handleClick={handleClick} />
-            </div>
-            <div className="child scrollable">
-              <div className="">
-                <Component {...pageProps} />
-                <Toaster />
+    <MoralisProvider initializeOnMount={false}>
+      <SocketContext.Provider value={socketContextValue}>
+        <SessionProvider session={pageProps.session} refetchInterval={5 * 60}>
+          <ThemeContext.Provider value={{ user: user!, setUser }}>
+            <div className="parent">
+              <div className="child left">
+                <Navigator handleClick={handleClick} />
               </div>
-            </div>
-            <div className="child right">
-              <IndexPageFeed />
-            </div>
-            {isOpen && (
-              <div>
-                <div
-                  onClick={handleClick}
-                  className={styles.pop__container}
-                ></div>
-                <div className={styles.pop__content__container}>
-                  <PopUpBody handleClick={handleClick} />
+              <div className="child scrollable">
+                <div className="">
+                  <Component {...pageProps} />
+                  <Toaster />
                 </div>
-                {/* </div> */}
               </div>
-            )}
-          </div>
-        </ThemeContext.Provider>
-      </SessionProvider>
-    </SocketContext.Provider>
+              <div className="child right">
+                <IndexPageFeed />
+              </div>
+              {isOpen && (
+                <div>
+                  <div
+                    onClick={handleClick}
+                    className={styles.pop__container}
+                  ></div>
+                  <div className={styles.pop__content__container}>
+                    <PopUpBody handleClick={handleClick} />
+                  </div>
+                  {/* </div> */}
+                </div>
+              )}
+            </div>
+          </ThemeContext.Provider>
+        </SessionProvider>
+      </SocketContext.Provider>
+    </MoralisProvider>
   );
 }

@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "data": {
+    "_id": "614edf7e9f22b803a3bfb6fa",
+    "participants": ["614edf3d9f22b803a3bfb6f9", "614ee00d9f22b803a3bfb6fb"],
+    "messages": [
+      {
+        "_id": "614ee2d4aaf6d0b0a5c79248",
+        "chatId": "614edf7e9f22b803a3bfb6fa",
+        "sender": {
+          "_id": "614edf3d9f22b803a3bfb6f9",
+          "name": "Alice",
+          "email": "alice@example.com",
+          "imageUrl": "https://example.com/alice.jpg"
+        },
+        "receiver": {
+          "_id": "614ee00d9f22b803a3bfb6fb",
+          "name": "Bob",
+          "email": "bob@example.com",
+          "imageUrl": "https://example.com/bob.jpg"
+        },
+        "content": "Hello Bob!",
+        "createdAt": "2021-09-24T18:29:00.000Z"
+      },
+      {
+        "_id": "614ee305aaf6d0b0a5c79249",
+        "chatId": "614edf7e9f22b803a3bfb6fa",
+        "sender": {
+          "_id": "614ee00d9f22b803a3bfb6fb",
+          "name": "Bob",
+          "email": "bob@example.com",
+          "imageUrl": "https://example.com/bob.jpg"
+        },
+        "receiver": {
+          "_id": "614edf3d9f22b803a3bfb6f9",
+          "name": "Alice",
+          "email": "alice@example.com",
+          "imageUrl": "https://example.com/alice.jpg"
+        },
+        "content": "Hi Alice, how are you?",
+        "createdAt": "2021-09-24T18:30:00.000Z"
+      },
+      {
+        "_id": "614ee314aaf6d0b0a5c7924a",
+        "chatId": "614edf7e9f22b803a3bfb6fa",
+        "sender": {
+          "_id": "614edf3d9f22b803a3bfb6f9",
+          "name": "Alice",
+          "email": "alice@example.com",
+          "imageUrl": "https://example.com/alice.jpg"
+        },
+        "receiver": {
+          "_id": "614ee00d9f22b803a3bfb6fb",
+          "name": "Bob",
+          "email": "bob@example.com",
+          "imageUrl": "https://example.com/bob.jpg"
+        },
+        "content": "I'm good, thanks for asking!",
+        "createdAt": "2021-09-24T18:31:00.000Z"
+      }
+    ]
+  }
+}
